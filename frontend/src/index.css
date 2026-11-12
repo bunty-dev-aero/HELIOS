@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #e5edf7;
+  background: #080d17;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #00d5ff44;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080d17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #26364a;
+  border-radius: 10px;
+}
+
+.mono {
+  font-family: 'DM Mono', monospace;
+}

@@ -1,0 +1,603 @@
+.crew-health-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  color: #e5edf7;
+  animation: crewHealthEnter 0.35s ease;
+}
+
+@keyframes crewHealthEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.crew-health-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.crew-health-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00d5ff;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.crew-health-heading h1 {
+  margin: 9px 0 5px;
+  color: #f0f6ff;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.crew-health-heading > div > p {
+  margin: 0;
+  color: #8494a9;
+  font-size: 13px;
+}
+
+.crew-health-live {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 13px;
+  border: 1px solid #1d6557;
+  border-radius: 7px;
+  background: #0d2826;
+  color: #54d9b0;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+.crew-health-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #48d6a5;
+  box-shadow: 0 0 10px #48d6a5;
+}
+
+.crew-health-selector-panel,
+.crew-health-profile,
+.crew-health-chart-panel,
+.crew-health-assessment-panel,
+.crew-health-history-panel {
+  padding: 20px;
+  border: 1px solid #1d2c40;
+  border-radius: 11px;
+  background: #0d1625;
+}
+
+.crew-health-selector-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 16px;
+  color: #9eafc3;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+}
+
+.crew-health-crew-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.crew-health-crew-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #24344a;
+  border-radius: 8px;
+  background: #111d2e;
+  color: #dce7f4;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.crew-health-crew-button:hover {
+  border-color: #3285a3;
+  background: #14273a;
+}
+
+.crew-health-crew-button.active {
+  border-color: #00bfe8;
+  background: #102a3b;
+  box-shadow: inset 0 0 0 1px #00bfe833;
+}
+
+.crew-health-avatar,
+.crew-health-profile-avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #24627b;
+  border-radius: 8px;
+  background: #123349;
+  color: #55dfff;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+}
+
+.crew-health-avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 11px;
+}
+
+.crew-health-crew-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  gap: 4px;
+}
+
+.crew-health-crew-info strong {
+  overflow: hidden;
+  color: #e7f0fa;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.crew-health-crew-info small {
+  overflow: hidden;
+  color: #8192a8;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.crew-health-crew-day {
+  color: #6f849c;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.crew-health-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background:
+    radial-gradient(ellipse at 10% 50%, #12334a 0%, transparent 60%),
+    #0d1625;
+}
+
+.crew-health-profile-main {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.crew-health-profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  font-size: 19px;
+}
+
+.crew-health-profile-main h2 {
+  margin: 7px 0 4px;
+  color: #f0f6ff;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.crew-health-profile-main p {
+  margin: 0;
+  color: #8da0b7;
+  font-size: 12px;
+}
+
+.crew-health-profile-meta {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.crew-health-profile-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.crew-health-profile-meta span {
+  color: #788ba2;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.7px;
+}
+
+.crew-health-profile-meta strong {
+  color: #dce9f7;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+}
+
+.crew-health-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.crew-health-section-title h2 {
+  margin: 0;
+  color: #e8f0fa;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.crew-health-section-title p {
+  margin: 5px 0 0;
+  color: #7f91a8;
+  font-size: 11px;
+}
+
+.crew-health-data-tag {
+  flex-shrink: 0;
+  padding: 6px 9px;
+  border: 1px solid #29445a;
+  border-radius: 5px;
+  background: #122437;
+  color: #69cbe9;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.6px;
+}
+
+.crew-health-vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.crew-health-vital-card {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #1e3045;
+  border-radius: 9px;
+  background: #0d1625;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.crew-health-vital-card:hover {
+  transform: translateY(-2px);
+  border-color: #32627b;
+}
+
+.crew-health-vital-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crew-health-vital-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #24516a;
+  border-radius: 8px;
+  background: #102b3c;
+  color: #42c9ee;
+}
+
+.crew-health-vital-label {
+  color: #9cacc0;
+  font-size: 11px;
+}
+
+.crew-health-vital-value {
+  margin-top: 20px;
+  color: #f1f7ff;
+  font-family: 'DM Mono', monospace;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.crew-health-vital-value span {
+  margin-left: 5px;
+  color: #8295aa;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.crew-health-vital-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 13px;
+  color: #70839a;
+  font-size: 9px;
+}
+
+.quality-tag,
+.simulated-tag,
+.recorded-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 7px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.quality-tag.good {
+  border-color: #23634e;
+  background: #102b25;
+  color: #65d5a7;
+}
+
+.quality-tag.low {
+  border-color: #805b2b;
+  background: #302517;
+  color: #f0bd70;
+}
+
+.quality-tag.unknown {
+  border-color: #46566a;
+  background: #1b2838;
+  color: #a6b5c6;
+}
+
+.simulated-tag {
+  border-color: #36527a;
+  background: #17263d;
+  color: #8eb9ff;
+}
+
+.recorded-tag {
+  border-color: #315e55;
+  background: #142b29;
+  color: #8bd6bd;
+}
+
+.crew-health-no-data {
+  margin-top: 20px;
+  color: #71849a;
+  font-size: 12px;
+}
+
+.crew-health-chart-panel,
+.crew-health-assessment-panel,
+.crew-health-history-panel {
+  min-width: 0;
+}
+
+.crew-health-chart {
+  width: 100%;
+  height: 280px;
+  margin-top: 8px;
+}
+
+.crew-health-no-chart,
+.crew-health-assessment-message,
+.crew-health-table-empty {
+  padding: 35px 15px;
+  color: #8293a8;
+  font-size: 12px;
+  text-align: center;
+}
+
+.crew-health-alert,
+.crew-health-no-alerts {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #634c2c;
+  border-radius: 8px;
+  background: #292318;
+  color: #efbb6b;
+}
+
+.crew-health-alert + .crew-health-alert {
+  margin-top: 9px;
+}
+
+.crew-health-alert > svg,
+.crew-health-no-alerts > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.crew-health-alert strong,
+.crew-health-no-alerts strong {
+  color: #e9d9bb;
+  font-size: 12px;
+}
+
+.crew-health-alert p,
+.crew-health-no-alerts p {
+  margin: 5px 0;
+  color: #b9aa91;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.crew-health-alert small {
+  color: #d6a85e;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+}
+
+.crew-health-no-alerts {
+  border-color: #285348;
+  background: #102822;
+  color: #6bd7ad;
+}
+
+.crew-health-no-alerts strong {
+  color: #9ae5c6;
+}
+
+.crew-health-no-alerts p {
+  color: #8dbba8;
+}
+
+.crew-health-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #263449;
+  color: #a0aabd;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.crew-health-disclaimer svg {
+  flex-shrink: 0;
+  color: #e7b76c;
+}
+
+.crew-health-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.crew-health-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.crew-health-table th {
+  padding: 11px 13px;
+  border-bottom: 1px solid #29394e;
+  color: #74869d;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-align: left;
+}
+
+.crew-health-table td {
+  padding: 13px;
+  border-bottom: 1px solid #1b2a3d;
+  color: #bdcad9;
+  font-size: 11px;
+}
+
+.crew-health-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.crew-health-table tbody tr:hover {
+  background: #111f30;
+}
+
+.crew-health-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #879bb1;
+}
+
+.crew-health-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 12px;
+  color: #8193aa;
+  text-align: center;
+}
+
+.crew-health-empty h2 {
+  margin: 0;
+  color: #e5edf7;
+  font-size: 18px;
+}
+
+.crew-health-empty p {
+  margin: 0;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .crew-health-crew-list,
+  .crew-health-vitals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .crew-health-profile {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .crew-health-profile-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 650px) {
+  .crew-health-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .crew-health-crew-list,
+  .crew-health-vitals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .crew-health-selector-panel,
+  .crew-health-profile,
+  .crew-health-chart-panel,
+  .crew-health-assessment-panel,
+  .crew-health-history-panel {
+    padding: 14px;
+  }
+
+  .crew-health-profile-meta {
+    gap: 12px;
+  }
+
+  .crew-health-profile-meta strong {
+    font-size: 11px;
+  }
+
+  .crew-health-section-title {
+    align-items: flex-start;
+  }
+
+  .crew-health-chart {
+    height: 230px;
+  }
+}
